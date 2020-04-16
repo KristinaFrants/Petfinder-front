@@ -36,8 +36,10 @@ export function Navibar() {
 					Blog
 				</Link>
 				{store.contacts == null || store.contacts == undefined ? (
-					<Button className="btn ourbtn p-2" variant="outline-light">
-						<Link to="/alertMsg">Quick Alert</Link>
+					<Button className="btn-danger bg-danger ourbtn p-2" variant="outline-light">
+						<Link style={{ color: "black", textDecoration: "none" }} to="/alertMsg">
+							Quick Alert
+						</Link>
 						<i className="fas fa-exclamation-circle ml-2" />
 					</Button>
 				) : null}

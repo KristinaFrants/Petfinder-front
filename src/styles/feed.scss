@@ -1,31 +1,4 @@
 
-//feeddddddddddddddddddddddddd
-.feedbox{
-    justify-content: center;
-    align-content: center;
-    margin: auto;
-    margin-top: 10px;
-    font-family: 'Indie Flower', cursive;
-    box-shadow: 10px 30px 100px 10px #033a01;;
-}
-
-.feedbox:hover {
-    transition: 1s;
-  box-shadow: 10px 30px 100px 10px whitesmoke;
-}
-
-/* GLOBAL VARIABLES */
-:root {
-  --fontOrigin: 1rem;     /* 16px */
-  --fontSmall: 0.625em;   /* 10px */
-  --fontMedium: 0.875em;  /* 14px */
-  --fontNormal: 1em;      /* 16px */
-  --fontLarge:  1.375em;  /* 22px */
-  --fontLight: 100;
-  --fontRegular: 400;
-  --speed: 0.65s;
-}
-
 @keyframes zoom {
   from {
     object-position: 0 50%;
@@ -46,85 +19,14 @@
   }
 }
 
-* {
-  border: 0;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: var(--font);
-  font-weight: var(--fontOrigin);
-  font-size: 1rem;
-  line-height: 1.2;
-  letter-spacing: 0.005rem;
-  -webkit-font-smoothing: subpixel-antialiased;
-//   font-smoothing: subpixel-antialiased;
-    background-position: cover;
-}
-
-
-.menu {
-  grid-area: menu;
-  align-self: end;
-}
-
-.menu__list {
-  text-align: center;
-}
-
-.menu__item {
-  position: relative;
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: var(--fontMedium);
-  font-weight: var(--fontRegular);
-  text-transform: uppercase;
-  color: #a9a9a9;
-  cursor: pointer;
-  -webkit-transition: all var(--speed) ease;
-  transition: all var(--speed) ease;
-}
-
-.menu__item::after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 2px;
-  margin-top: 6px;
-  background: rgba(100, 100, 250, 1);
-  -webkit-transition: all var(--speed) ease;
-  transition: all var(--speed) ease;
-}
-
-.menu__item:hover {
-  color: rgb(240, 87, 87);
-}
-.menu__item.active {
-  color: rgba(240, 57, 57, 0.842);
-}
-
-.menu__item.active::after {
-  width: 100%;
-}
-
 .fbox {
   position: relative;
   grid-area: card;
   align-self: center;
-  justify-self: center;
-  overflow: hidden;
   display: block;
   width: 100%;
-  max-width: 250px;
-  height: 400px;
-  font-size: var(--fontOrigin);
-  border-radius: 8px;
-  box-shadow: 0 16px 60px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-  -webkit-transition: all var(--speed) ease;
-  transition: all var(--speed) ease;
+  height: 40%;
+  box-shadow: 0px 10px 30px -5px #3e4244;
 }
 
 .fbox:hover {
@@ -192,23 +94,6 @@ body {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5));
 }
 
-.fbox__image img {
-  -webkit-transform: scale(1.3, 1.3);
-  transform: scale(1.3, 1.3);
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 1;
-  -webkit-transition: all var(--speed) ease;
-  transition: all var(--speed) ease;
-  animation-name: zoom;
-  animation-duration: 3s;
-  animation-direction: alternate;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  background-image: url("https://blog.hdwallsource.com/wp-content/uploads/2014/11/gradient-26052-26737-hd-wallpapers.jpg.png")
-}
 
 .fbox:hover .fbox__image img {
   -webkit-transform: scale(1.3, 1.3);
@@ -235,25 +120,8 @@ body {
 }
 
 .fbox__profile img {
-  -webkit-transform: scale(1.5, 1.5)  translateZ(0);
-  transform: scale(1.5, 1.5)  translateZ(0);
-  display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: 50% 50%;
-  -webkit-filter: grayscale(50%) contrast(75%) brightness(1.3);
-  filter: grayscale(50%) contrast(75%) brightness(1.3);
-  -webkit-transition: all var(--speed) ease;
-  transition: all var(--speed) ease;
-  mix-blend-mode: normal;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.fbox:hover .fbox__profile img {
-  -webkit-transform: scale(1, 1)  translateZ(0);
-  transform: scale(1, 1)  translateZ(0);
 }
 
 .fbox__body {
@@ -272,57 +140,12 @@ body {
     transition: 0.5s;
 }
 
-.fbox__name {
-  align-self: center;
-  justify-self: center;
-  margin-bottom: 2px;
-  color: black;
-  font-size: var(--fontLarge);
-  font-weight: var(--fontLight);
-  letter-spacing: 0.1rem;
-  text-align: center;
-  text-transform: uppercase;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
-  background: -webkit-linear-gradient(pink, #f3f3f3);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-transition: all var(--speed) ease;
-  transition: all var(--speed) ease;
-  opacity: 0;
-}
-
-.fbox:hover .fbox__name {
-  background: -webkit-linear-gradient(pink, #c1c1c1);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-    opacity: 1;
-}
-
-.fbox__job {
-  align-self: center;
-  justify-self: center;
-  display: inline-block;
-  font-size: var(--fontRegular);
-  font-weight: var(--fontRegular);
-  text-align: center;
-  letter-spacing: 0.35rem;
-  color: rgba(235, 10, 10, 0.493);
-  -webkit-transition: all var(--speed) ease;
-  transition: all var(--speed) ease;
-}
-
-.fbox:hover .fbox__job {
-  color:rgba(233, 7, 7, 0.897);
-}
-
 .fbox__bio {
   position: relative;
   -webkit-transform: translateY(50%);
   transform: translateY(50%);
   display: flex;
-  font-size: 1vw;;
-  font-weight: var(--fontRegular);
-  /*text-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.35);*/
+  font-size: 1vw;
   color: rgba(255, 255, 255, 0.65);
   opacity: 0;
   -webkit-transition: all var(--speed) ease;
@@ -340,12 +163,11 @@ body {
   -webkit-transform: translateY(-70%);
   transform: translateY(-70%);
   display: inherit;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-areas: "date category";
   margin: 10px 20px;
   opacity: 1;
-  -webkit-transition: 0.5s;
+//   -webkit-transition: 0.5s;
   transition: 0.5s;
+  margin-bottom: 4%;
 }
 
 .fbox:hover .fbox__footer {
@@ -368,44 +190,7 @@ body {
   transition: 0.5s
 }
 .fbox__date {
-//   grid-area: date;
   display: inline-block;
-  position: initial;
-  align-self: left;
-  justify-self: left;
-  font-size: var(--fontRegular);
-  font-weight: var(--fontLight);
-  text-transform: uppercase;
-  text-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.45);
-  color: black
-}
+  margin-bottom: 8%;
 
-/* MODIFIERS */
-.fbox[data-effect="blur"]:hover .fbox__image img {
-  -webkit-filter: blur(3px);
-  filter: blur(3px);
-}
-
-.fbox[data-effect="blur"] .fbox__image img {
-  animation-name: blur;
-}
-
-.fbox[data-effect="color"]:hover {
-  -webkit-transform: scale(1, 1);
-  transform: scale(1, 1);
-  box-shadow: 0 40px 260px rgba(255, 0, 0, 0.1), 0 40px 130px rgba(250, 100, 100, 0.2), -80px -40px 230px rgba(0, 200, 250, 0.15), 80px 40px 230px rgba(120, 120, 255, 0.15);
-}
-
-.fbox[data-effect="color"] .fbox__image {
-  background: linear-gradient(to bottom, rgba(20, 20, 100, 1), rgba(255, 100, 100, 0.5))
-}
-
-.fbox[data-effect="color"]:hover .fbox__image img {
-  opacity: 1;
-}
-
-.fbox[data-effect="color"]:hover .fbox__profile img {
-  -webkit-filter: grayscale(50%) contrast(80%) brightness(1.6);
-  filter: grayscale(50%) contrast(80%) brightness(1.6);
-  mix-blend-mode: normal;
 }

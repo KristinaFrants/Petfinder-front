@@ -11,13 +11,6 @@ import Form from "react-bootstrap/Form";
 import { useSpring, animated, useTransition, interpolate } from "react-spring";
 import { ListGroupItem } from "react-bootstrap";
 
-let CardStyle = {
-	width: "40%",
-	height: "40%",
-	borderStyle: "15px solid white",
-	boxShadow: " 0px 10px 30px -5px #3e4244"
-};
-
 export const Feed = () => {
 	const [show, setShow] = useState(false);
 	const handleClose = () => setShow(false);
@@ -70,7 +63,7 @@ export const Feed = () => {
                                             )} */}
 												<img
 													src={
-														myPet[0] != undefined
+														myPet[0] != undefined || myPet[0] != null
 															? myPet[0].image
 															: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQGEW0s-O3xZDwQ2S2CSgL4qDU_Yla1TMAzaYghrXHcJMk0xKY6&usqp=CAU"
 													}

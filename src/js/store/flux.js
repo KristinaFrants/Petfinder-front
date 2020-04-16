@@ -3,12 +3,12 @@ import { Login } from "../views/login";
 import { Feed } from "../views/feed";
 import { AlertMsg } from "../views/alertMessage";
 
-const url = "https://3000-aa6da014-4123-47d9-9d75-0c55c612d6ef.ws-us02.gitpod.io/";
+const url = "https://3000-bf064330-ed30-44ce-8d73-1217917d61f7.ws-us02.gitpod.io/";
 
-const urlUser = "https://3000-aa6da014-4123-47d9-9d75-0c55c612d6ef.ws-us02.gitpod.io/users";
-const urlAlert = "https://3000-aa6da014-4123-47d9-9d75-0c55c612d6ef.ws-us02.gitpod.io/alert";
+const urlUser = "https://3000-bf064330-ed30-44ce-8d73-1217917d61f7.ws-us02.gitpod.io/users";
+const urlAlert = "https://3000-bf064330-ed30-44ce-8d73-1217917d61f7.ws-us02.gitpod.io/alert";
 // const urlMessage = "https://3000-aa6da014-4123-47d9-9d75-0c55c612d6ef.ws-us02.gitpod.io/message";
-const urlPet = "https://3000-aa6da014-4123-47d9-9d75-0c55c612d6ef.ws-us02.gitpod.io/pets";
+const urlPet = "https://3000-bf064330-ed30-44ce-8d73-1217917d61f7.ws-us02.gitpod.io/pets";
 
 const urlBreeds = "https://api.thedogapi.com/v1/breeds";
 const getState = ({ getStore, getActions, setStore }) => {
