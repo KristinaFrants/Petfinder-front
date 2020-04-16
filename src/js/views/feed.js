@@ -44,12 +44,6 @@ export const Feed = () => {
 										<button className="fbox__save  js-save" type="button">
 											<i className="fa  fa-bookmark" />
 										</button>
-										<figure className="fbox__image">
-											<img
-												src="https://blog.hdwallsource.com/wp-content/uploads/2014/11/gradient-26052-26737-hd-wallpapers.jpg.png"
-												alt="Short description"
-											/>
-										</figure>
 
 										<div className="fbox__header">
 											<figure className="fbox__profile">
@@ -65,7 +59,7 @@ export const Feed = () => {
 													src={
 														myPet[0] != undefined || myPet[0] != null
 															? myPet[0].image
-															: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQGEW0s-O3xZDwQ2S2CSgL4qDU_Yla1TMAzaYghrXHcJMk0xKY6&usqp=CAU"
+															: "https://image.freepik.com/free-vector/minimal-cat-portrait_23-2147493975.jpg"
 													}
 													alt="Short description"
 												/>
@@ -86,7 +80,7 @@ export const Feed = () => {
 										</div>
 										<div>
 											<Button onClick={handleShow} variant="danger" className="alertbutton">
-												Alert Me of a Lead
+												Alert The Owner
 											</Button>
 
 											<Modal show={show} onHide={handleClose}>
@@ -162,15 +156,11 @@ export const Feed = () => {
 									{/* /* // ---------------------------------------------------feedmap----------------------------------------- */}
 									<div
 										key={index}
-										className="fbox d-inline-block ourfont2 col-3 m-3 container p-1"
+										className="fbox d-inline-block ourfont col-3 m-3 h-20 container p-1"
 										data-effect="zoom">
 										<button className="fbox__save  js-save" type="button">
 											<i className="fa  fa-bookmark" />
 										</button>
-										<figure className="fbox__image">
-											<img src="https://blog.hdwallsource.com/wp-content/uploads/2014/11/gradient-26052-26737-hd-wallpapers.jpg.png" />
-										</figure>
-
 										<div className="fbox__header">
 											<figure className="fbox__profile">
 												{/* {alertUser.pet.image == "true" ? (
@@ -185,7 +175,7 @@ export const Feed = () => {
 													src={
 														myPet[0] != undefined
 															? myPet[0].image
-															: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQGEW0s-O3xZDwQ2S2CSgL4qDU_Yla1TMAzaYghrXHcJMk0xKY6&usqp=CAU"
+															: "https://image.freepik.com/free-vector/minimal-cat-portrait_23-2147493975.jpg"
 													}
 													alt="Short description"
 												/>
@@ -206,7 +196,7 @@ export const Feed = () => {
 										</div>
 										<div>
 											<Button onClick={handleShow} variant="danger" className="alertbutton">
-												Alert Me of a Lead
+												Alert The Owner
 											</Button>
 
 											<Modal show={show} onHide={handleClose}>
@@ -279,26 +269,3 @@ export const Feed = () => {
 		</div>
 	);
 };
-// <div className="row text-center cardrow">{mapAllAlerts}</div>
-/* // -------------------------------sort buttons---------------------------------- */
-/* <div className="btn-group col-3 mx-auto">
-    <button
-        type="button"
-        className="btn btn-info dropdown-toggle "
-        data-toggle="dropdown"
-        aria-haspopup="true"
-        aria-expanded="false">
-        Sort By:
-    </button>
-    <div className="dropdown-menu">
-        <a className="dropdown-item" href="#">
-            Post Date
-        </a>
-        <a className="dropdown-item" href="#">
-            Zip Code
-        </a>
-        <a className="dropdown-item" href="#">
-            alphabet
-        </a>
-    </div>
-</div> */
