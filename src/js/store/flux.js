@@ -7,7 +7,7 @@ const url = "https://petfinders-back.herokuapp.com/";
 
 const urlUser = "https://petfinders-back.herokuapp.com/users";
 const urlAlert = "https://petfinders-back.herokuapp.com/alert";
-// const urlMessage = "https://3000-aa6da014-4123-47d9-9d75-0c55c612d6ef.ws-us02.gitpod.io/message";
+// const urlMessage = "https://petfinders-back.herokuapp.com/message";
 const urlPet = "https://petfinders-back.herokuapp.com/pets";
 
 const urlBreeds = "https://api.thedogapi.com/v1/breeds";
