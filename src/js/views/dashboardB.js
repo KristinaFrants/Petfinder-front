@@ -199,7 +199,7 @@ export const DashboardB = props => {
 														marginRight: "1%"
 													}}
 													className="btn btn-danger"
-													onClick={() => actions.deletePet(pet.id, props.history)}>
+													onClick={() => actions.deletePet(pet.id)}>
 													Remove pet
 												</button>
 												{form === false ? (

@@ -2,9 +2,10 @@ const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
+require("@babel/polyfill");
 
 module.exports = {
-  entry: [
+  entry: ['babel-polyfill',
     './src/js/index.js'
   ],
   output: {
