@@ -41,7 +41,10 @@ export const Feed = () => {
 										key={index}
 										className="fbox d-inline-block ourfont2 col-3 m-3 container p-1"
 										data-effect="zoom">
-										<button className="fbox__save  js-save" type="button">
+										<button
+											className="fbox__save  js-save"
+											type="button"
+											onClick={() => actions.deleteAlert(alert.id)}>
 											<i className="far fa-trash-alt" />
 										</button>
 
@@ -158,7 +161,10 @@ export const Feed = () => {
 										key={index}
 										className="fbox d-inline-block ourfont col-3 m-3 h-20 container p-1"
 										data-effect="zoom">
-										<button className="fbox__save  js-save" type="button">
+										<button
+											className="fbox__save  js-save"
+											type="button"
+											onClick={() => actions.deleteAlert(alert.id)}>
 											<i className="far fa-trash-alt" />
 										</button>
 										<div className="fbox__header">

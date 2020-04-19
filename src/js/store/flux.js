@@ -144,6 +144,16 @@ const getState = ({ getStore, getActions, setStore }) => {
 						console.log("There was an Error : \n", error);
 					});
 			},
+			deleteAlert: (id, history) => {
+				fetch(url + "alert" + "/" + `${id}`, { method: "DELETE" })
+					.then(() => {
+						console.log("Alert has been deleted");
+						getActions().getAlerts();
+					})
+					.catch(function(error) {
+						console.log("An error occured during alert removal process :\n", error);
+					});
+			},
 			login(bubu, history) {
 				console.log("logging:", bubu);
 				return fetch(url + "myLogin", {
