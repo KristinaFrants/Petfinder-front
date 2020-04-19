@@ -46,7 +46,7 @@ const trans2 = (x, y) => `translate3d(${x / 8 + 35}px,${y / 8 - 80}px,0)`;
 const trans3 = (x, y) => `translate3d(${x / 6 - 25}px,${y / 6 - 80}px,0)`;
 const trans4 = (x, y) => `translate3d(${x / 3.5}px,${y / 3.5}px,0)`;
 
-export const Jumbo = () => {
+export const Blog = () => {
 	const [props, set] = useSpring(() => ({ xy: [0, 0], config: { mass: 10, tension: 550, friction: 240 } }));
 
 	return (
@@ -58,19 +58,19 @@ export const Jumbo = () => {
 					<animated.div className="card3" style={{ transform: props.xy.interpolate(trans3) }} />
 					<animated.div className="card4" style={{ transform: props.xy.interpolate(trans4) }} />
 				</div>
-				<div id="slide" style={TextStyle} className="container1 col-7 ">
+				{/* <div id="slider" style={TextStyle} className="container1 col-7 ">
 					<h3 className="headerStyle">Welcome To PetFinders Blog!</h3>
 					<p style={TextStyle}>
 						{" "}
 						Where we have articles on Lost & Found tips pet care-taking tips, veteniary advice, and About
 						Us!!
 					</p>
-				</div>
+				</div> */}
 			</div>
 		</>
 	);
 };
 
-Jumbo.propTypes = {
+Blog.propTypes = {
 	xy: PropTypes.object
 };
