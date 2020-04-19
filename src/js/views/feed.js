@@ -42,7 +42,7 @@ export const Feed = () => {
 										className="fbox d-inline-block ourfont2 col-3 m-3 container p-1"
 										data-effect="zoom">
 										<button className="fbox__save  js-save" type="button">
-											<i className="fa  fa-bookmark" />
+											<i className="far fa-trash-alt" />
 										</button>
 
 										<div className="fbox__header">
@@ -159,7 +159,7 @@ export const Feed = () => {
 										className="fbox d-inline-block ourfont col-3 m-3 h-20 container p-1"
 										data-effect="zoom">
 										<button className="fbox__save  js-save" type="button">
-											<i className="fa  fa-bookmark" />
+											<i className="far fa-trash-alt" />
 										</button>
 										<div className="fbox__header">
 											<figure className="fbox__profile">
