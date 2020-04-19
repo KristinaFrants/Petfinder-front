@@ -133,7 +133,7 @@ export const Feed = () => {
 														onClick={() => {
 															actions.sendSmsAlert(alert.id);
 															{
-																handleClose;
+																handleClose();
 															}
 														}}>
 														Send Alert!
