@@ -98,7 +98,7 @@ export const Feed = () => {
 															<Form.Control type="email" placeholder="Enter email" />
 
 															<Form.Text className="text-muted">
-																Well never share your email with anyone else.
+																Please enter your email
 															</Form.Text>
 														</Form.Group>
 
@@ -217,7 +217,7 @@ export const Feed = () => {
 															<Form.Control type="email" placeholder="Enter email" />
 
 															<Form.Text className="text-muted">
-																Well never share your email with anyone else.
+																Please enter your email address
 															</Form.Text>
 														</Form.Group>
 

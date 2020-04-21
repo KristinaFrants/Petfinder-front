@@ -15,7 +15,7 @@ export function Navibar() {
 	return (
 		<Navbar variant="success" className="mb-2 navdesign">
 			<Navbar.Brand className="ourfont2">
-				<Link style={{ color: "black" }} to="/">
+				<Link style={{ color: "black", textDecoration: " overline dotted grey", marginLeft: "4%" }} to="/">
 					{" "}
 					Petfinders
 				</Link>
@@ -36,7 +36,7 @@ export function Navibar() {
 					Blog
 				</Link>
 				{store.contacts == null || store.contacts == undefined ? (
-					<Button className="btn-danger bg-danger ourbtn p-2" variant="outline-light">
+					<Button className="btn-danger bg-danger ourbtn ml-2" variant="outline-light">
 						<Link style={{ color: "black", textDecoration: "none" }} to="/alertMsg">
 							Quick Alert
 						</Link>
