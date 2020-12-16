@@ -10,33 +10,16 @@ background-image: url("https://i1.wp.com/onlyvectorbackgrounds.com/wp-content/up
 background-position-y: 210%;
 }
 
-.wrapperImg {
-    overflow: hidden;
-   
-} 
 
-#slide {
-    position: absolute;
-    left: -1500px;
-    // width: 400px;
-    height: 600px;
-    text-align: left;
-
-    -webkit-animation: slide 0.5s backwards;
-    -webkit-animation-delay: 2s;
-    animation: slide 0.5s forwards;
-    animation-delay: 2s;
+@media screen and (max-width: 600px){
+.imageAlert__component{
+    display: none;
+};
+.container__postAlert {
+    width: 77% !important;
+    margin-left: 5%;
 }
-
-@-webkit-keyframes slide {
-    100% { left: 0; }
 }
-
-@keyframes slide {
-    100% { left: 0; }
-}
-
-
 
 //Footer
 
@@ -204,15 +187,15 @@ font-family: 'Playfair Display', serif;
 
 #btnLogin:hover {
     color: black;
-  background-color: rgba(197, 186, 27, 0.904);
+  background-color:  rgba(250, 195, 14, 0.904);
 }
 #btnAlert:hover {
     color: black;
-  background-color: rgba(197, 186, 27, 0.904);
+  background-color: rgba(250, 195, 14, 0.904);
 }
 
 .cardEffect {
-  width: 45ch;
+  width: 40ch;
   height: 45ch;
   background: grey;
   border-radius: 5px;

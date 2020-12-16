@@ -8,35 +8,20 @@ import { Spring, config } from "react-spring/renderprops";
 
 let JumboStyles = {
 	borderStyle: "15px solid white",
-	// borderWidth: "5px",
 	width: "90%",
 	marginLeft: "auto",
 	marginRight: "auto",
 	marginBottom: "10%",
 	borderRadius: "5px",
 	boxShadow: " 0px 15px 30px -5px #3e4244",
-	justifyContent: "right",
-	alignContent: "right",
+	justifyContent: "center",
 	marginTop: "4%"
 };
 
-let TextStyle = {
-	float: "left",
-	width: "120%",
-	fontColor: "black",
-	justifyContent: "left",
-	alignContent: "left",
-	padding: "10%",
-	bottom: "10%"
-};
 let imageCar = {
 	align: "center",
-	height: "500px"
-};
-
-let Caption = {
-	color: "black",
-	fontSize: "15px"
+	height: "auto",
+	display: "flex"
 };
 
 export const Jumbo = () => (
@@ -49,9 +34,8 @@ export const Jumbo = () => (
 					src="https://www.smartertravel.com/uploads/2017/09/Cover_Pet-Friendly-Pets-2-1-1400x500.jpg"
 					alt="First slide"
 				/>
-				<Carousel.Caption style={Caption}>
-					<h1>PetFinders</h1>
-					<p>An a interactive user platform to aid in reconnecting owners back with their furry friends</p>
+				<Carousel.Caption>
+					<h5 style={{ color: "black" }}>Find a best friend</h5>
 				</Carousel.Caption>
 			</Carousel.Item>
 			<Carousel.Item>
@@ -62,22 +46,8 @@ export const Jumbo = () => (
 					alt="Third slide"
 				/>
 
-				<Carousel.Caption style={Caption}>
-					<h3>Connect</h3>
-					<p>Connect with users who are finding their furry friends!</p>
-				</Carousel.Caption>
-			</Carousel.Item>
-			<Carousel.Item>
-				<img
-					style={imageCar}
-					className=" d-block w-100 "
-					src="https://animalhaven.org/wp-content/uploads/2020/03/DeeDee-banner-08157-760x326.jpg"
-					alt="Third slide"
-				/>
-
-				<Carousel.Caption style={Caption}>
-					<h3>Alerts!</h3>
-					<p>Immediately Alerts between users!</p>
+				<Carousel.Caption>
+					<h5 style={{ color: "black" }}>Adopt or Buy a Furry Buddy!</h5>
 				</Carousel.Caption>
 			</Carousel.Item>
 		</Carousel>
