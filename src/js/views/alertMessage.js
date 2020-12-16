@@ -4,31 +4,19 @@ import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 let FormStyles = {
-	// borderStyle: "15px solid white",
 	boxShadow: " 0px 10px 30px -5px #3e4244",
-	// borderWidth: "4px",
 	marginRight: "2%",
 	marginBottom: "4%",
 	marginTop: "2%",
-	marginLeft: "2%",
-	width: "50%",
-	float: "right"
-};
-
-let InputStyles = {
-	padding: "10px",
-	width: "30%",
-	margin: "auto"
+	marginLeft: "2%"
 };
 
 let ButtonStyle = {
-	width: "40%",
-	marginLeft: "1%",
-	marginBottom: "5%",
-	marginTop: "4%",
-	padding: "10px",
+	marginBottom: "4%",
+	marginTop: "10%",
 	boxShadow: "4px 4px grey"
 };
 
@@ -47,130 +35,115 @@ export const AlertMsg = () => {
 	const handleShow = () => setShow(true);
 
 	return (
-		<div>
-			<div>
-				<img
-					src="http://s1.1zoom.net/big0/382/425769-svetik.jpg"
-					style={{
-						float: "right",
-						width: "40%",
-						marginTop: "2%",
-						marginRight: "2%"
-					}}
-				/>
-			</div>
-			<div style={FormStyles} className=" ourfont2">
-				<div className="text-center mt-2 mb-2">
-					<Form>
-						<h1 style={{ marginTop: "4%", fontFamily: "Playfair Display, serif", marginRight: "35%" }}>
-							Emergency Alert!
-						</h1>
-						<Form.Row>
-							<Form.Group style={InputStyles} controlId="formBasicInfo">
-								<Form.Label style={{ float: "left", fontFamily: "Playfair Display, serif" }}>
-									Name
-								</Form.Label>
-								<Form.Control
-									type="text"
-									placeholder="Your name"
-									defaultValue={name}
-									onChange={e => setName(e.target.value)}
-								/>
-								<Form.Text className="text-muted float-left">First Name & Last Name </Form.Text>
-							</Form.Group>
-							<Form.Group style={InputStyles} controlId="formBasicInfo">
-								<Form.Label style={{ float: "left", fontFamily: "Playfair Display, serif" }}>
-									Pet ID
-								</Form.Label>
-								<Form.Control
-									type="text"
-									placeholder="Pet ID"
-									defaultValue={petname}
-									onChange={e => setPetName(e.target.value)}
-								/>
-								<Form.Text className="text-muted float-left">Info from the collar</Form.Text>
-							</Form.Group>
-						</Form.Row>
-						<Form.Row>
-							<Form.Group style={InputStyles} controlId="formBasicInfo">
-								<Form.Label style={{ float: "left", fontFamily: "Playfair Display, serif" }}>
-									Phone Number:
-								</Form.Label>
-								<Form.Control
-									type="text"
-									placeholder="Enter Phone Number"
-									defaultValue={phone}
-									onChange={e => setPhone(e.target.value)}
-								/>
-								<Form.Text className="text-muted float-left">Enter your phone number</Form.Text>
-							</Form.Group>
-							<Form.Group style={InputStyles} controlId="formBasicInfo">
-								<Form.Label style={{ float: "left", fontFamily: "Playfair Display, serif" }}>
-									E-mail
-								</Form.Label>
-								<Form.Control
-									type="email"
-									placeholder="Enter Email"
-									defaultValue={email}
-									onChange={e => setEmail(e.target.value)}
-								/>
-								<Form.Text className="text-muted float-left">Enter your email</Form.Text>
-							</Form.Group>
-						</Form.Row>
-						<Form.Group
-							style={{ width: "60%", marginBottom: "2%", marginLeft: "20%", marginTop: "4%" }}
-							controlId="formBasicMessage">
-							{/* <Form.Label style={{ float: "left", fontFamily: "Playfair Display, serif" }}>
-							Message
-						</Form.Label> */}
+		<div className="alert__post row">
+			<div className="container__postAlert col" style={FormStyles}>
+				<Form className="formGroup__post">
+					<i>
+						<h3 className="ml-4 mt-4 mb-4" style={{ color: "grey" }}>
+							Post New Add
+						</h3>
+					</i>
+					<hr />
+					<Form className="row mt-2">
+						<Form.Group controlId="formBasicInfo " className="mr-3 ml-4 p-2 col">
 							<Form.Control
-								as="textarea"
-								rows="3"
 								type="text"
-								defaultValue={message}
-								placeholder="Tell Us All The Details!"
-								onChange={e => setMessage(e.target.value)}
+								placeholder="Your name"
+								defaultValue={name}
+								onChange={e => setName(e.target.value)}
 							/>
+							<Form.Text className="text-muted float-left">First Name & Last Name </Form.Text>
 						</Form.Group>
-						<Button
-							style={ButtonStyle}
-							id="btnAlert"
-							variant="danger"
-							type="submit"
-							data-toggle="modal"
-							data-target=".bd-example-modal-sm"
-							onClick={() => {
-								actions.createAlert(message, email, name, petname, phone),
-									alert("Your Alert has been Sent"),
-									onShow();
-							}}>
-							Post In Our Feed!
-							<div
-								className="modal fade bd-example-modal-sm"
-								tabIndex={-1}
-								role="dialog"
-								aria-labelledby="mySmallModalLabel"
-								aria-hidden="true">
-								<div className="modal-dialog modal-sm">
-									<div className="modal-content" />
-								</div>
-							</div>
-						</Button>
+
+						<Form.Group controlId="formBasicInfo" className=" ml-2 mr-3 p-2 col">
+							<Form.Control
+								type="text"
+								placeholder="Pet ID"
+								defaultValue={petname}
+								onChange={e => setPetName(e.target.value)}
+							/>
+							<Form.Text className="text-muted float-left">Enter Pet Name or ID</Form.Text>
+						</Form.Group>
 					</Form>
-				</div>
-				{/* <Modal show={show} onHide={handleClose}>
-						<Modal.Header closeButton>
-							<Modal.Title>Confirmation</Modal.Title>
-						</Modal.Header>
-						<Modal.Body>Alert Has been made!</Modal.Body>
-						<Modal.Footer>
-							<Button variant="secondary" onClick={handleClose}>
-								Close
-							</Button>
-						</Modal.Footer>
-					</Modal>
-                </Form> */}
+
+					<Form className="row mt-2">
+						<Form.Group controlId="formBasicInfo" className="mr-3 ml-4 p-2 col">
+							<Form.Control
+								type="text"
+								placeholder="Phone Number"
+								defaultValue={phone}
+								onChange={e => setPhone(e.target.value)}
+							/>
+							<Form.Text className="text-muted float-left">Enter your phone number</Form.Text>
+						</Form.Group>
+						<Form.Group controlId="formBasicInfo" className=" ml-2 mr-3 p-2 col">
+							<Form.Control
+								type="email"
+								placeholder="Email"
+								defaultValue={email}
+								onChange={e => setEmail(e.target.value)}
+							/>
+
+							<Form.Text className="text-muted float-left">Enter your email</Form.Text>
+						</Form.Group>
+					</Form>
+
+					<Form.Group controlId="formBasicMessage">
+						<Form.Control
+							className="mt-4"
+							as="textarea"
+							rows="8"
+							type="text"
+							defaultValue={message}
+							placeholder="Tell Us All The Details"
+							onChange={e => setMessage(e.target.value)}
+						/>
+						<Form.Text className="text-muted float-left">Describe the Pet that you are Selling</Form.Text>
+					</Form.Group>
+
+					<Button
+						style={ButtonStyle}
+						id="btnAlert"
+						variant="dark"
+						size="lg"
+						block
+						type="submit"
+						data-toggle="modal"
+						data-target=".bd-example-modal-sm"
+						onClick={() => {
+							actions.createAlert(message, email, name, petname, phone),
+								alert("Your Alert has been Sent"),
+								onShow();
+						}}>
+						Post In Our Feed
+						<div
+							className="modal fade bd-example-modal-sm"
+							tabIndex={-1}
+							role="dialog"
+							aria-labelledby="mySmallModalLabel"
+							aria-hidden="true">
+							<div className="modal-dialog modal-sm">
+								<div className="modal-content" />
+							</div>
+						</div>
+					</Button>
+					<small className="mb-4">
+						To post an Add with a picture of your pet, please <Link to="./signup">Register</Link> to our
+						website
+					</small>
+				</Form>
+
+				{/* </div> */}
 			</div>
+			<img
+				style={{
+					paddingTop: "2%",
+					paddingBottom: "4%",
+					marginRight: "2%"
+				}}
+				className="imageAlert__component col-5  "
+				src="https://image.freepik.com/free-photo/adorable-beagle-puppy-solo-portrait_53876-64818.jpg"
+			/>
 		</div>
 	);
 };
