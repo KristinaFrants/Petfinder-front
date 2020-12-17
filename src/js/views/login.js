@@ -15,7 +15,7 @@ let FormStyles = {
 };
 
 let ImgStiles = {
-	width: "47%",
+	width: "46%",
 	float: "left",
 	backgroundRepeat: "no-repeat",
 	marginLeft: "2%",
@@ -52,7 +52,7 @@ let ButtonStyles = {
 	width: "80%",
 	marginLeft: "12%",
 	marginBottom: "4%",
-	marginTop: "5%",
+	marginTop: "8%",
 	padding: "10px",
 	boxShadow: "4px 4px grey"
 };
@@ -82,15 +82,16 @@ export const Login = props => {
 	});
 	return (
 		<div>
-			<div>
+			<div className="login__image">
 				<img
 					src="https://image.freepik.com/free-photo/blue-yellow-macaw-parrot-ara-ararauna_58995-111.jpg"
 					style={ImgStiles}
 				/>
 			</div>
-			<form ref={form} style={FormStyles} onSubmit={e => handleSubmit(e)}>
+			<form ref={form} style={FormStyles} onSubmit={e => handleSubmit(e)} className="login__form">
 				<div className="form-group">
 					<h2 style={HeadStyles}>ACCOUNT LOGIN</h2>
+
 					<label style={TextStyles} htmlFor="exampleInputEmail1">
 						Email address
 					</label>

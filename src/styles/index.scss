@@ -20,6 +20,46 @@ background-position-y: 210%;
     margin-left: 5%;
 }
 }
+@media screen and (max-width: 600px){
+.containerSingup{
+    display: none;
+}
+.registration__form{
+width: 92% !important;
+}
+}
+
+@media screen and (max-width: 600px){
+.containerSingup{
+    display: none;
+}
+.registration__form{
+width: 92% !important;
+}
+}
+
+@media screen and (max-width: 600px){
+.login__image
+{
+    display: none;
+}
+.login__form{
+width: 92% !important;
+}
+}
+
+
+@media screen and (max-width: 600px){
+.image__petProfile{
+    display: none;
+}
+.form__petProfile{
+width: 92% !important;
+}
+}
+
+
+
 
 //Footer
 

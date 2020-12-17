@@ -70,6 +70,7 @@ export const Feed = () => {
 										</div>
 										<div>
 											<p className="fbox__body">{alert.message}</p>
+											<p>{store.actions.petname}</p>
 											<div className="container fbox__bio">
 												<p className="col-5">
 													Here is my <br /> contact info:

@@ -38,11 +38,15 @@ export const AlertMsg = () => {
 		<div className="alert__post row">
 			<div className="container__postAlert col" style={FormStyles}>
 				<Form className="formGroup__post">
-					<i>
-						<h3 className="ml-4 mt-4 mb-4" style={{ color: "grey" }}>
-							Post New Add
-						</h3>
-					</i>
+					<h3
+						className="ml-4 mt-4 mb-4"
+						style={{
+							fontFamily: "Playfair Display, serif",
+							color: " #3e4244"
+						}}>
+						Post New Add
+					</h3>
+
 					<hr />
 					<Form className="row mt-2">
 						<Form.Group controlId="formBasicInfo " className="mr-3 ml-4 p-2 col">
