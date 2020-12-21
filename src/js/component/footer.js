@@ -14,7 +14,8 @@ export function Footer() {
 					<p className="footer-links">
 						<Link to="/">Home</Link> · <a href="#">Blog</a> ·<a href="#">Lost</a> · <a href="#">Pet News</a>
 					</p>
-					<p className="footer-company-name">May the Force be with you</p>
+					<p className="footer-company-name">Buid by WebFluencer</p>
+					<Link to="/">Contact Us</Link>
 					<div className="footer-icons">
 						<a href="#">
 							<i className="fab fa-facebook-f" />
@@ -29,14 +30,6 @@ export function Footer() {
 							<i className="fab fa-github" />
 						</a>
 					</div>
-				</div>
-				<div className="footer-right">
-					<p>Contact Us</p>
-					<form action="#" method="post">
-						<input type="text" name="email" placeholder="Email" />
-						<textarea name="message" placeholder="Message" defaultValue={""} />
-						<button>Send</button>
-					</form>
 				</div>
 			</footer>
 		</div>
