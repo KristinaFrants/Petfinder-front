@@ -153,7 +153,7 @@ export const DashboardB = props => {
 				</div>
 				<hr className="w-75 mx-auto border" />
 
-				<div className="row mx-auto">
+				<div className=" mx-auto">
 					{currentUser.length > 0 ? (
 						reversePets(currentUser[0].pets).map((pet, index) => {
 							console.log("pet-map", pet);
